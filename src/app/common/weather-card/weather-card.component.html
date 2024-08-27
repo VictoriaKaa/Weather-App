@@ -1,0 +1,12 @@
+<div class="weather-card">
+  <div class="weather-card-name">3-Hourly Forecast</div>
+  <div class="weather-card-list">
+    <div *ngFor="let item of forecastList" class="weather-card-info">
+      <div class="weather-card-info-time">
+        {{ transformTxtDate(item.dt_txt) }}
+      </div>
+      <div class="weather-card-info-temp">{{ item.main.temp + "°C" }}</div>
+      <div class="weather-card-info-desc">{{ item.weather[0].main }}</div>
+    </div>
+  </div>
+</div>

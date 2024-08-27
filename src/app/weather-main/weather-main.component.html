@@ -1,0 +1,15 @@
+<div class="weather-main">
+    <div *ngIf="weather">
+        <div class="weather-main-container">
+            <div class="weather-city">{{ weather.name }}</div>
+            <div class="weather-temp">{{ calculateTemp() }}</div>
+            <div class="weather-description">{{ weather.weather[0].description }}</div> 
+        </div>
+        <div class="weather-add-info">
+            <app-weather-block class="weather-add-info-child" name="Feels like" [info]="weather.main.feels_like + '°C'"></app-weather-block>
+            <app-weather-block class="weather-add-info-child" name="Humidity" [info]="weather.main.humidity + '%'"></app-weather-block>
+            <app-weather-block class="weather-add-info-child" name="Wind" [info]="weather.wind.speed + ' m/s'"></app-weather-block>
+            <app-weather-block class="weather-add-info-child" name="Time" [info]="weather.timezone | gmtOffsetPipe"></app-weather-block>
+        </div>
+    </div>
+</div>

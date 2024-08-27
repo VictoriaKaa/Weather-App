@@ -1,0 +1,15 @@
+<form (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <input
+      type="tel"
+      matInput
+      placeholder="City"
+      name="search"
+      outlined="none"
+      [(ngModel)]="city"
+    />
+    <button matSuffix mat-button>
+      <mat-icon [ngStyle]="{ color: 'white' }">search</mat-icon>
+    </button>
+  </mat-form-field>
+</form>

@@ -1,0 +1,19 @@
+<div class="weather-forecast">
+  <div *ngIf="forecast">
+    <div class="weather-forecast-card">
+      <app-weather-card [forecastList]="forecast.list"></app-weather-card>
+    </div>
+    <div class="weather-forecast-bottom">
+      <app-weather-block
+        class="weather-add-info-child"
+        name="Sunrise"
+        [info]="timeConverter(forecast.city.sunrise, forecast.city.timezone)"
+      ></app-weather-block>
+      <app-weather-block
+        class="weather-add-info-child"
+        name="Sunset"
+        [info]="timeConverter(forecast.city.sunset, forecast.city.timezone)"
+      ></app-weather-block>
+    </div>
+  </div>
+</div>

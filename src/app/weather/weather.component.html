@@ -1,0 +1,14 @@
+<div class="weather-app" [style]="getImageEvent()">
+  <app-weather-form
+    (weatherData)="updateWeather($event)"
+    class="weather-form"
+  ></app-weather-form>
+  <div class="weather-container">
+    <div>
+      <app-weather-main [weather]="weather"></app-weather-main>
+    </div>
+    <div>
+      <app-weather-forecast [forecast]="forecast"></app-weather-forecast>
+    </div>
+  </div>
+</div>

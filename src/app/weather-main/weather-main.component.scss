@@ -1,0 +1,26 @@
+.weather-main {
+  &-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 240px;
+    font-size: 20px;
+    color: white;
+    .weather-city {
+      font-size: 14px;
+    }
+    .weather-temp {
+      padding: 10px;
+      font-size: 50px;
+    }
+  }
+  .weather-add-info {
+    display: flex;
+    color: white;
+    flex-wrap: wrap;
+    &-child {
+      width: 49%;
+    }
+  }
+}
